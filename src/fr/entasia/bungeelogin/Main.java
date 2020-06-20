@@ -26,6 +26,8 @@ public class Main extends Plugin {
 
 			if(getProxy().getPluginManager().getPlugin("Libraries")==null)throw new SecurityException("Libraries not here");
 
+			getProxy().getPluginManager().registerListener(this, new Listeners());
+
 			SocketClient.addListener(new SocketEvent("login") {
 				@Override
 				public void onEvent(String[] data) {
