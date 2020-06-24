@@ -2,4 +2,4 @@ name: BungeeLogin
 main: fr.entasia.bungeelogin.Main
 version: '-1'
 author: iTrooz_
-depends: [Libraries]
+softDepends: [Libraries]
