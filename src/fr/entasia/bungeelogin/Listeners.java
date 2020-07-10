@@ -38,8 +38,8 @@ public class Listeners implements Listener {
 	@EventHandler(priority = -115)
 	public void onDisconnect(PlayerDisconnectEvent e) {
 		if(!Common.enableDev){
-			while(LoginUtils.logins.contains(e.getPlayer().getName())){
-				LoginUtils.logins.remove(e.getPlayer().getName());
+			while(true){
+				if(!LoginUtils.logins.remove(e.getPlayer().getName()))break;
 			}
 		}
 	}
